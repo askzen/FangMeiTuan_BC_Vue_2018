@@ -1,0 +1,42 @@
+// 导航背景
+$navBg: #06c1ae;
+$navColor: #fff;
+// 箭头
+@mixin arrow($w: 10px, $c: #000, $dir: top) {
+	width: 0;
+	font-size: 0;
+	border: $w solid transparent;
+	border-#{$dir}-color: $c;
+}
+// 定义混合选择器，复用样式
+%items {
+	padding: 0 10px;
+	background: #fff;
+	li {
+		padding: 10px 0;
+		border-top: 1px solid #ccc;
+		min-height: 60.5px;
+	}
+	img {
+		width: 100px;
+		height:60.5px;
+		float: left;
+	}
+	.content {
+		margin-left: 108px;
+	}
+	h3 {
+		font-size: 14px;
+		min-height: 44px;
+	}
+	p {
+		font-size: 12px;
+		.price {
+			color: $navBg;
+			margin-right: 8px;
+		}
+		.sales {
+			float: right;
+		}
+	}
+}

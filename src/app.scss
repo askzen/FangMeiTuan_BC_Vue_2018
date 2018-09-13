@@ -1,0 +1,62 @@
+@import './base.scss';
+// 默认样式
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.clearfix:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+html,
+body {
+	background: #efefef;
+}
+.header {
+	background: $navBg;
+	color: $navColor;
+	height: 60px;
+	line-height: 60px;
+	.goback {
+		position: relative;
+		float: left;
+		.arrow {
+			@include arrow(10px, $navColor, right);
+			position: absolute;
+			left: 0;
+			top: 20px;
+			.green {
+				top: -10px;
+				left: -8px;
+				border-right-color: $navBg;
+			}
+		}
+	}
+	.login {
+		float: right;
+		margin-right: 10px;
+	}
+	h1 {
+		text-align: center;
+		font-size: 24px;
+		text-indent: 1.5em;
+	}
+}
+.search {
+	padding: 10px 20px;
+	background: #fff;
+	input {
+		padding: 10px 20px;
+		outline: none;
+		border: none;
+		background: #efefef;
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+		font-size: 12px;
+		border-radius: 17px;
+		color: #666;
+	}
+}

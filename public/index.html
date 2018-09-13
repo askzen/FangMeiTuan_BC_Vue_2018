@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="maximum-scale=1,minimum-scale=1,width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>ickt-preject</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but ickt-preject doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <template id="tpl">
+      <div>
+        <div class="header">
+          <div class="goback" @click="goBack">
+            <span class="arrow">
+              <span class="arrow green"></span>
+            </span>
+          </div>
+          <div class="login">登录</div>
+          <h1>幸运团购网站</h1>
+        </div>
+       
+        <div class="search" v-show="$route.path.indexOf('/detail/') != 0">
+          <input type="text" placeholder="请输入搜索关键字" @keyup.enter="showSearchResult" v-model="msg"/>
+        </div>
+        <router-view></router-view>
+      </div>
+    </template>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
